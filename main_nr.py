@@ -4,7 +4,7 @@ def main(type, inicio, fim, day_minus):
     import pandas as pd
     import warnings
     import os
-    from . import functions
+    import functions
     warnings.filterwarnings(
     "ignore",
     message="DataFrame is highly fragmented",
@@ -13,7 +13,6 @@ def main(type, inicio, fim, day_minus):
 
     dominio_interno = os.getlogin()
     logger = functions.logger
-    print(f'parametros recebidos: inicio {inicio} e  dminus {day_minus}')
     logger.write( etapa='Charge', mensagem=f'parametros recebidos: inicio {inicio} e  dminus {day_minus}') 
 
     logger.write( etapa='Charge', mensagem=' carregando dados QMOB') 
@@ -83,4 +82,4 @@ def main(type, inicio, fim, day_minus):
     logger.write( etapa='END', mensagem='Pipeline Concluído')
     
 if __name__ == '__main__':  
-    main('rt', "01.08.2026", '',0) 
+    main('rt', "23.09.2026", '',0) 
